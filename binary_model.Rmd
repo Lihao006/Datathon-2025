@@ -1,0 +1,166 @@
+---
+title: "Schneider-electric"
+author: "Óscar Lu & Lihao Jin"
+date: "2025-11-15"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+##-- Load necessary libraries
+library(ggplot2)      # For advanced plotting
+library(FactoMineR)   # For PCA and supplementary variables   
+library(factoextra)   # For PCA visualization
+library(car)
+
+
+# Load packages ----------------------------------------------------------------
+library(car) # anova test
+library(logistf) # Penalized regression
+library(ROCR) # ROC graph
+library(lme4) # Calibration Plot
+library(dplyr) # Calibration Plot
+library(ggplot2) # Calibration Plot
+
+
+```
+
+```{r}
+sn_data <- read.csv("C:/Users/crost/Desktop/schneider-electric/dataset.csv", header = TRUE, sep = ",", stringsAsFactors = TRUE)
+```
+
+
+```{r}
+sn_data
+```
+
+```{r}
+summary(sn_data)
+```
+
+
+```{r}
+c('Deviance'           = m0_logit$deviance,
+  'Degrees of freedom' = m0_logit$df.res)
+
+c('Deviance'           = m0_probit$deviance,
+  'Degrees of freedom' = m0_probit$df.res)
+
+c('Deviance'           = m0_cloglog$deviance,
+  'Degrees of freedom' = m0_cloglog$df.res)
+```
+
+
+
+
+```{r}
+m0_logit <- glm(target_variable ~ product_A_sold_in_the_past + product_C + cust_hitrate + cust_interactions + cust_contracts + opp_old + competitor_Z + cust_in_iberia + , data = sn_data, family = binomial(link= "logit"))
+summary(m0_logit)
+```
+
+```{r}
+m0_probit <- glm(target_variable ~ product_A_sold_in_the_past + product_C + cust_hitrate + cust_interactions + cust_contracts + opp_old + competitor_Z + cust_in_iberia, data = sn_data, family = binomial(link= "probit"))
+summary(m0_probit)
+```
+
+```{r}
+m0_cloglog <- glm(target_variable ~ product_A_sold_in_the_past + product_C + cust_hitrate + cust_interactions + cust_contracts + opp_old + competitor_Z + cust_in_iberia, data = sn_data, family = binomial(link= "cloglog"))
+summary(m0_cloglog)
+```
+
+```{r}
+Anova(m0_logit, test.statistic = 'LR')
+Anova(m0_probit, test.statistic = 'LR')
+Anova(m0_cloglog, test.statistic = 'LR')
+```
+
+
+
+
+
+
+
+
+
+## 1. Train an classification model
+
+
+```{r}
+md_bin_1 <- glm(pres ~ *, data = sn_data, family = binomial(link= "logit"))
+summary(m_age_dis)
+
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+
+## 2. Apply Explainability Techniques
+
+
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
+
