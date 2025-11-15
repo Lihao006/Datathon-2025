@@ -1,0 +1,62 @@
+---
+title: "Schneider-electric"
+author: "Óscar Lu & Lihao Jin"
+date: "2025-11-15"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+##-- Load necessary libraries
+library(ggplot2)      # For advanced plotting
+library(FactoMineR)   # For PCA and supplementary variables   
+library(factoextra)   # For PCA visualization
+library(car)
+```
+
+
+
+```{r}
+sn_data <- read.csv("C:/Users/crost/Desktop/df_train.csv", header = TRUE, sep = ",", stringsAsFactors = TRUE)
+```
+
+# Description of the data
+
+## Univariate exploratory data analysis
+
+
+
+```{r}
+summary(sn_data)
+```
+
+```{r}
+# load the dataMaid library
+library(dataMaid) 
+
+# use makeDataReport with HTML as output
+makeDataReport(sn_data, output = "html", replace = TRUE)
+```
+
+
+
+
+```{r}
+# load the DataExplorer library
+library(DataExplorer) 
+
+# use create_report 
+create_report(sn_data)
+```
+
+```{r}
+# load the SmartEDA library
+library(SmartEDA) 
+
+# use ExpReport
+ExpReport(sn_data, op_file = 'SmartEDA_df.html')
+```
