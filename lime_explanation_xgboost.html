@@ -37089,25 +37089,25 @@
 /***/ })
 /******/ ]);
 //# sourceMappingURL=bundle.js.map </script></head><body>
-        <div class="lime top_div" id="top_divT57B7YOGT78YSCM"></div>
+        <div class="lime top_div" id="top_div1IMLAHBI5BVSTAJ"></div>
         
         <script>
-        var top_div = d3.select('#top_divT57B7YOGT78YSCM').classed('lime top_div', true);
+        var top_div = d3.select('#top_div1IMLAHBI5BVSTAJ').classed('lime top_div', true);
         
             var pp_div = top_div.append('div')
                                 .classed('lime predict_proba', true);
             var pp_svg = pp_div.append('svg').style('width', '100%');
-            var pp = new lime.PredictProba(pp_svg, ["Lost", "Won"], [0.6198442578315735, 0.3801557421684265]);
+            var pp = new lime.PredictProba(pp_svg, ["Lost", "Won"], [0.8180065751075745, 0.18199343979358673]);
             
         
         var exp_div;
             var exp = new lime.Explanation(["Lost", "Won"]);
         
                 exp_div = top_div.append('div').classed('lime explanation', true);
-                exp.show([["product_A_recommended <= -0.11", 0.1773270179523522], ["product_A <= -0.09", 0.1545841128357788], ["product_A_sold_in_the_past <= -0.26", -0.1338762488916454], ["opp_old <= -0.28", 0.12039480951761328], ["cust_contracts <= -0.35", -0.10903943952342952], ["product_D <= -0.04", -0.10141050967731087], ["competitor_X <= 0.00", -0.08070496378512125], ["cust_interactions > 0.37", -0.07915002597031712], ["-0.93 < cust_hitrate <= -0.21", -0.06887553795591904], ["cust_in_iberia <= 0.00", -0.05817601811152571], ["-0.82 < opp_month <= -0.23", 0.043386526438096505], ["product_B_sold_in_the_past <= -0.35", 0.04232075031007581], ["competitor_Y > 0.00", -0.033947140179683415], ["competitor_Z <= 0.00", 0.029177940638919465], ["product_C <= -0.02", 0.0]], 1, exp_div);
+                exp.show([["product_A_recommended <= -0.11", 0.22138865533410218], ["product_C <= -0.02", 0.184268287910368], ["product_A <= -0.09", 0.1396930453627397], ["cust_interactions > 0.37", -0.11237314983806192], ["-0.82 < opp_month <= -0.23", 0.07179539402913858], ["cust_contracts <= -0.35", -0.0683120552838558], ["cust_in_iberia <= 0.00", -0.06262069070436507], ["product_A_sold_in_the_past <= -0.26", -0.06042667833793949], ["opp_old <= -0.28", 0.05761787058908633], ["-0.93 < cust_hitrate <= -0.21", -0.05613523274764507], ["competitor_Z <= 0.00", 0.05067978452965601], ["competitor_X <= 0.00", 0.042987241057867484], ["competitor_Y > 0.00", -0.00914238781988686], ["product_D <= -0.04", -0.006146189699492537], ["product_B_sold_in_the_past <= -0.35", 0.0007000197718049248]], 1, exp_div);
                 
         var raw_div = top_div.append('div');
-            exp.show_raw_tabular([["product_A_recommended", "-0.11", 0.1773270179523522], ["product_A", "-0.09", 0.1545841128357788], ["product_A_sold_in_the_past", "-0.26", -0.1338762488916454], ["opp_old", "-0.28", 0.12039480951761328], ["cust_contracts", "-0.35", -0.10903943952342952], ["product_D", "-0.04", -0.10141050967731087], ["competitor_X", "0.00", -0.08070496378512125], ["cust_interactions", "0.94", -0.07915002597031712], ["cust_hitrate", "-0.25", -0.06887553795591904], ["cust_in_iberia", "0.00", -0.05817601811152571], ["opp_month", "-0.53", 0.043386526438096505], ["product_B_sold_in_the_past", "-0.35", 0.04232075031007581], ["competitor_Y", "1.00", -0.033947140179683415], ["competitor_Z", "0.00", 0.029177940638919465], ["product_C", "-0.02", 0.0]], 1, raw_div);
+            exp.show_raw_tabular([["product_A_recommended", "-0.11", 0.22138865533410218], ["product_C", "-0.02", 0.184268287910368], ["product_A", "-0.09", 0.1396930453627397], ["cust_interactions", "0.94", -0.11237314983806192], ["opp_month", "-0.53", 0.07179539402913858], ["cust_contracts", "-0.35", -0.0683120552838558], ["cust_in_iberia", "0.00", -0.06262069070436507], ["product_A_sold_in_the_past", "-0.26", -0.06042667833793949], ["opp_old", "-0.28", 0.05761787058908633], ["cust_hitrate", "-0.25", -0.05613523274764507], ["competitor_Z", "0.00", 0.05067978452965601], ["competitor_X", "0.00", 0.042987241057867484], ["competitor_Y", "1.00", -0.00914238781988686], ["product_D", "-0.04", -0.006146189699492537], ["product_B_sold_in_the_past", "-0.35", 0.0007000197718049248]], 1, raw_div);
         
         </script>
         </body></html>
